@@ -44,10 +44,16 @@ Three layouts were built and compared pairwise against the judge
 criteria (names the day, breadth, reads, faithful, craft); the
 diplomacy layout is the entry. The classic layout garbled one grid
 item and dropped eleven list items; the tabloid layout lost the
-Gaza and Sudan stories from its grid. The chosen layout keeps the
-full 5–16 grid and all four leads; its known flaws are six missing
-one-line items in the list (21–25, 28), one merged line (39), and
-a typo in the date-check footer ("repoted").
+Gaza and Sudan stories from its grid. The chosen layout keeps the full 5–16 grid and all four leads.
+Revision 26 November 2026 fixed the date-check footer typo
+("repoted" → "reported"), unmerged list line 39 ("Power cut hits
+Gaza children's hospital."), corrected the garbled line 29 to the
+Sinner knee-surgery story, and fixed "wathdoog" → "watchdog" in
+line 46 (pixel-level patch of `entry.png`; the world map was not
+touched). The rendered list still omits items 21–25, 28 and 40–44:
+the two list columns have no room for them at a readable size, so
+the complete 50-story list is kept in `stories.md` as the source
+of truth.
 
 `main.ts` uses only the Node standard library, makes no network
 calls, and writes the same bytes on every run.
@@ -55,7 +61,9 @@ calls, and writes the same bytes on every run.
 ## Contents
 
 - `main.ts` — entry point: copies the bundled PNG out.
-- `entry.png` — the finished 1024×1024 poster (553.006 bytes).
+- `entry.png` — the finished 1024×1024 poster (revised 26 Nov 2026).
+- `stories.md` — the full 50-story source list (leads, grid, ALSO
+  list, date check, variant comparison, revision note).
 - `LICENSE` — MIT.
 
 ---
